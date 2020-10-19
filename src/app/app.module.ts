@@ -5,8 +5,11 @@ import { MatToolbarModule, MatListModule, MatGridListModule, MatButtonModule, Ma
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
+import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
 import { DishDetailComponent } from './dishdetail/dishdetail.component';
+
+import { DishService } from './services/dish.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { DishDetailComponent } from './dishdetail/dishdetail.component';
     MatCardModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [
+    DishService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
