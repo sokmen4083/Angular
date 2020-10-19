@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import { Promotion } from '../shared/promotion';
 import { PROMOTIONS } from '../shared/promotions';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class PromotionService {
 
   constructor() { }
@@ -13,7 +11,7 @@ export class PromotionService {
     return PROMOTIONS;
   }
 
-  getPromotion(id: string): Promotion {
+  getPromotion(id: number): Promotion {
     return PROMOTIONS.filter((promo) => (promo.id === id))[0];
   }
 
