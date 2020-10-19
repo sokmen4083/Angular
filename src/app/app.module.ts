@@ -2,8 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { MatToolbarModule, MatListModule, MatGridListModule, MatButtonModule, MatCardModule } from '@angular/material'; 
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -34,15 +39,19 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,    
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    FormsModule,
+    AppRoutingModule,    
     MatToolbarModule, 
     MatListModule,   
     MatGridListModule, 
     MatButtonModule,
     MatCardModule,
-    FlexLayoutModule,
-    AppRoutingModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule, 
+    MatInputModule,
+    MatCheckboxModule
   ],
   providers: [
     DishService,
